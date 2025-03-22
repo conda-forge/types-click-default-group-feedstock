@@ -1,5 +1,5 @@
 {% set name = "types-click-default-group" %}
-{% set version = "1.2.0.20241221" %}
+{% set version = "1.2.0.20250322" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: e875d461755888f25c8334fc5f56b8e84a3238ab657fa1fd980c87d496379580
+  sha256: 565c46cdf58b14b7bbd50bcca3582394f0c4750030a6ad7ae3be032db41fa46d
 
 build:
   noarch: python
