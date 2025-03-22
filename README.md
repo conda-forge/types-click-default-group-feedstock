@@ -3,9 +3,9 @@ About types-click-default-group-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/types-click-default-group-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/python/typeshed
+Home: https://github.com/python/typeshed/tree/main/stubs/click-default-group
 
-Package license: Apache-2.0 AND MIT
+Package license: Apache-2.0
 
 Summary: Typing stubs for click-default-group
 
