@@ -9,8 +9,10 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/t/types-click-default-group/types_click_default_group-${{ version }}.tar.gz
-  sha256: 565c46cdf58b14b7bbd50bcca3582394f0c4750030a6ad7ae3be032db41fa46d
+  - url: https://pypi.org/packages/source/t/types-click-default-group/types_click_default_group-${{ version }}.tar.gz
+    sha256: 565c46cdf58b14b7bbd50bcca3582394f0c4750030a6ad7ae3be032db41fa46d
+  - url: https://raw.githubusercontent.com/python/typeshed/main/LICENSE
+    sha256: 295f8538c94ae5c3043301cf7cff1c852dab6a786a8ddee471e061b40d5ecabe
 
 build:
   number: 0
@@ -28,18 +30,28 @@ requirements:
     - python >=${{ python_min }}
 
 tests:
-  - requirements:
+  - files:
+      recipe:
+        run_test.py
+    requirements:
       run:
         - pip
+        - python ${{ python_min }}.*
     script:
       - pip check
-      - test -f $SP_DIR/click_default_group-stubs/__init__.pyi
+      - python run_test.py
+  - requirements:
+      run:
+        - click-default-group
+        - mypy
+    script:
+      - mypy -p click_default_group
 
 about:
   summary: Typing stubs for click-default-group
-  license: Apache-2.0 AND MIT
+  license: Apache-2.0
   license_file: LICENSE
-  homepage: https://github.com/python/typeshed
+  homepage: https://github.com/python/typeshed/tree/main/stubs/click-default-group
 
 extra:
   recipe-maintainers:
