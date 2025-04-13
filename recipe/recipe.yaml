@@ -42,6 +42,8 @@ tests:
   - requirements:
       run:
         - click-default-group
+        # https://github.com/python/typeshed/blob/main/stubs/click-default-group/METADATA.toml#L3
+        - click >=8.0.0
         - mypy
     script:
       - mypy -p click_default_group
