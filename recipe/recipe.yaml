@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "1.2.0.20250425"
+  version: "1.2.0.20250513"
 
 package:
   name: types-click-default-group
@@ -10,7 +10,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/t/types-click-default-group/types_click_default_group-${{ version }}.tar.gz
-    sha256: 4ccf1cb07853347103a6923c755ecb619f4137dfe9dafab29cf6f6393563d9c1
+    sha256: 44804c5de725699e029ee87a3ce8b25b183708681649aa16223b190d926e9c50
   - url: https://raw.githubusercontent.com/python/typeshed/main/LICENSE
     sha256: 295f8538c94ae5c3043301cf7cff1c852dab6a786a8ddee471e061b40d5ecabe
 
