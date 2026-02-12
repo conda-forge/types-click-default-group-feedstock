@@ -15,7 +15,7 @@ source:
     sha256: 295f8538c94ae5c3043301cf7cff1c852dab6a786a8ddee471e061b40d5ecabe
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script:
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
@@ -31,7 +31,8 @@ requirements:
 
 tests:
   - files:
-      recipe: run_test.py
+      recipe:
+        - run_test.py
     requirements:
       run:
         - pip
